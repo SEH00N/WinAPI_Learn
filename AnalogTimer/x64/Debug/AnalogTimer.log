@@ -1,0 +1,18 @@
+﻿  AnalogTimer.cpp
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(200,29): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(201,30): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(202,28): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(203,31): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(222,80): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(222,42): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(223,79): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(223,40): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(238,80): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(238,42): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(239,79): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(239,40): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(254,80): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(254,42): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(255,77): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\GitHub\WinAPI_Learn\AnalogTimer\AnalogTimer.cpp(255,40): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  AnalogTimer.vcxproj -> D:\GitHub\WinAPI_Learn\Digitaltimer\x64\Debug\AnalogTimer.exe
