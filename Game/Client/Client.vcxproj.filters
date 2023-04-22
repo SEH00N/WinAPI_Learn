@@ -11,6 +11,9 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{4160ea2a-feb3-4206-a5f3-860aa89e132e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameScene">
+      <UniqueIdentifier>{9685d4b0-5d9f-4fdb-b9cb-c83e92c34371}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -29,6 +32,9 @@
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="Game.h" />
+    <ClInclude Include="StartScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -38,6 +44,9 @@
       <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="StartScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">

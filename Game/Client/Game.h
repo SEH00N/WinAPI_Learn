@@ -1,5 +1,4 @@
 #pragma once
-#include "H00NEngine.h"
 
 class Game : public H00NEngine
 {
@@ -12,5 +11,9 @@ public:
 	virtual void Update(float dt) override;
 	virtual void Render(HDC hdc) override;
 	virtual void Release() override;
+
+private:
+	float m_posX;
+	float m_posY;
 };
 

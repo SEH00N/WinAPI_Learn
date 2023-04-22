@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "H00NEngine.h"
+#include "SceneManager.h"
 
 H00NEngine::H00NEngine() : m_hBackDC(NULL), m_hBitmap(NULL)
 {
@@ -24,12 +25,37 @@ void H00NEngine::Startup()
 
 	ReleaseDC(m_hWnd, hdc);
 
+	// 변수 초기화
+	m_timer = make_shared<Timer>();
+	if (m_timer)
+		m_timer->Init();
+
+	m_input = make_shared<Input>();
+	if (m_input)
+		m_input->Init(m_hWnd);
+
 	Init();
 }
 
 void H00NEngine::MainUpdate()
 {
-	float fDt = 0.0f;
+	if (!m_timer)
+		return;
+
+	m_timer->Update();
+	UINT fps = m_timer->GetFPS();
+
+	WCHAR text[100] = _T("");
+	::wsprintf(text, _T("FPS : %d"), fps);
+	::SetWindowText(m_hWnd, text);
+
+	if(m_input)
+		m_input->Update();
+
+	float fDt = m_timer->GetDeltaTime();
+
+	GET_SINGLE(SceneManager)->Update(fDt);
+
 	Update(fDt);
 }
 
@@ -38,6 +64,8 @@ void H00NEngine::MainRender()
 	HDC hdc = GetDC(m_hWnd);
 	RECT winRect{ 0, 0, (LONG)m_nWidth, (LONG)m_nHeight };
 	FillRect(m_hBackDC, &winRect, (HBRUSH)COLOR_BACKGROUND);
+
+	GET_SINGLE(SceneManager)->Render(m_hBackDC);
 
 	Render(m_hBackDC);
 
@@ -49,6 +77,8 @@ void H00NEngine::Cleanup()
 {
 	DeleteObject(m_hBitmap);
 	DeleteDC(m_hBackDC);
+
+	GET_SINGLE(SceneManager)->Release();
 
 	Release();
 }

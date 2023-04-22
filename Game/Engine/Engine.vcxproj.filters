@@ -7,6 +7,9 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{17b7bae9-9d6b-4448-9a7a-0d3bdcb98e3f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{47b3f39f-fa01-40f1-ae86-45e914cc7e47}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -21,6 +24,18 @@
     <ClInclude Include="H00NEngine.h">
       <Filter>Engine</Filter>
     </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -34,6 +49,18 @@
     </ClCompile>
     <ClCompile Include="H00NEngine.cpp">
       <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Scene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
