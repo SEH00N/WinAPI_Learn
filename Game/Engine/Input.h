@@ -1,13 +1,15 @@
 #pragma once
 
-enum class KEY_TYPE {
+enum class KEY_TYPE
+{
 	UP = VK_UP,
 	DOWN = VK_DOWN,
 	LEFT = VK_LEFT,
 	RIGHT = VK_RIGHT,
 };
 
-enum class KEY_STATE {
+enum class KEY_STATE
+{
 	NONE,
 	PRESS,
 	DOWN,
@@ -15,9 +17,10 @@ enum class KEY_STATE {
 	END,
 };
 
-enum {
+enum
+{
 	KEY_TYPE_COUNT = static_cast<int>(UINT8_MAX + 1),
-	KEY_STATE_COUNT = static_cast<int>(KEY_STATE::END)
+	KEY_STATE_COUNT = static_cast<int>(KEY_STATE::END),
 };
 
 class Input

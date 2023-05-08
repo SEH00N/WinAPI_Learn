@@ -17,12 +17,11 @@ void Input::Init(HWND hWnd)
 
 void Input::Update()
 {
-	HWND hWnd = ::GetActiveWindow();
-	if (m_hWnd != hWnd)
+	HWND hwnd = ::GetActiveWindow();
+	if (m_hWnd != hwnd)
 	{
 		for (UINT key = 0; key < KEY_TYPE_COUNT; ++key)
 			m_states[key] = KEY_STATE::NONE;
-		
 		return;
 	}
 
@@ -36,6 +35,7 @@ void Input::Update()
 		{
 			KEY_STATE& state = m_states[key];
 
+			// 이전 프레임에 키를 누른 상태인지 체크해보자.
 			if (state == KEY_STATE::PRESS || state == KEY_STATE::DOWN)
 				state = KEY_STATE::PRESS;
 			else
@@ -45,6 +45,7 @@ void Input::Update()
 		{
 			KEY_STATE& state = m_states[key];
 
+			// 이전 프레임에 키를 누른 상태인지 체크
 			if (state == KEY_STATE::PRESS || state == KEY_STATE::DOWN)
 				state = KEY_STATE::UP;
 			else

@@ -22,6 +22,7 @@ void SceneManager::LoadScene(const wstring& sceneName)
 	if (it != m_sceneContainer.end())
 	{
 		m_activeScene = it->second;
+		m_activeScene->Init();
 	}
 }
 

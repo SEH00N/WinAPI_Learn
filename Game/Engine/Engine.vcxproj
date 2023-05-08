@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{10c4b4a8-035b-4403-b805-7155c69e0d4c}</ProjectGuid>
+    <ProjectGuid>{62c059f8-7504-49d4-af22-c1514396209e}</ProjectGuid>
     <RootNamespace>Engine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -72,15 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)Output\</OutDir>
+    <IncludePath>..\Lib\FMOD\inc\;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Lib\FMOD\lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)Output\</OutDir>
+    <IncludePath>..\Lib\FMOD\inc\;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Lib\FMOD\lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Output\</OutDir>
+    <IncludePath>..\Lib\FMOD\inc\;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Lib\FMOD\lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Output\</OutDir>
+    <IncludePath>..\Lib\FMOD\inc\;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Lib\FMOD\lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -151,19 +159,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="EnginePCH.h" />
-    <ClInclude Include="H00NEngine.h" />
-    <ClInclude Include="H00NWindow.h" />
+    <ClInclude Include="BTSEngine.h" />
+    <ClInclude Include="BTSWindow.h" />
+    <ClInclude Include="EnginePch.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="ImageManager.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SoundManager.h" />
     <ClInclude Include="Timer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EnginePCH.cpp" />
-    <ClCompile Include="H00NEngine.cpp" />
-    <ClCompile Include="H00NWindow.cpp" />
+    <ClCompile Include="BTSEngine.cpp" />
+    <ClCompile Include="BTSWindow.cpp" />
+    <ClCompile Include="EnginePch.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="ImageManager.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -173,6 +186,7 @@
     </ClCompile>
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

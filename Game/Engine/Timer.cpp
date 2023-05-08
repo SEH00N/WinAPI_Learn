@@ -19,7 +19,7 @@ void Timer::Update()
 {
 	UINT64 currentCount;
 	::QueryPerformanceCounter(reinterpret_cast<LARGE_INTEGER*>(&currentCount));
-	
+
 	m_deltaTime = (currentCount - m_prevCount) / static_cast<float>(m_frequency);
 	m_prevCount = currentCount;
 

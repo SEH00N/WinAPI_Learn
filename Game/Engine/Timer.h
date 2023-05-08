@@ -1,4 +1,5 @@
 #pragma once
+
 class Timer
 {
 public:
@@ -10,7 +11,7 @@ public:
 	void Update();
 
 public:
-	UINT	GetFPS() { return m_fps; }
+	UINT	GetFps() { return m_fps; }
 	float	GetDeltaTime() { return m_deltaTime; }
 
 private:
@@ -20,7 +21,7 @@ private:
 
 private:
 	UINT	m_frameCount = 0;
-	UINT	m_fps = 0;
 	float	m_frameTime = 0.0f;
+	UINT	m_fps = 0;
 };
 
