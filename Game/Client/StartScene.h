@@ -17,7 +17,12 @@ private:
 	float m_posX;
 	float m_posY;
 
+	int m_offsetY;
+	int m_offsetSpeed;
+
 	shared_ptr<Image> m_player;
 	shared_ptr<Image> m_map;
+
+	shared_ptr<ProgressBar>	m_progressBar;
 };
 

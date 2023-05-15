@@ -14,6 +14,9 @@ void StartScene::Init()
 	m_posX = 100.0f;
 	m_posY = 100.0f;
 
+	m_offsetY = 0;
+	m_offsetSpeed = 200;
+
 	GET_SINGLE(SoundManager)->AddSound(_T("Attack"), _T("../Resources/Sound/Character_attack.wav"));
 	GET_SINGLE(SoundManager)->AddSound(_T("BGM"), _T("../Resources/Sound/Thinking Out Loud.WAV"), true, true);
 	GET_SINGLE(SoundManager)->AddSound(_T("Linda"), _T("../Resources/Sound/Linda.mp3"), true, true);
@@ -21,7 +24,40 @@ void StartScene::Init()
 	GET_SINGLE(SoundManager)->Play(_T("BGM"), 0.5f);
 
 	m_player = GET_SINGLE(ImageManager)->AddImage(_T("Player"), _T("../Resources/Image/Pikachu.bmp"));
-	m_map = GET_SINGLE(ImageManager)->AddImage(_T("Map"), _T("../Resources/Image/Map.bmp"));
+	m_map = GET_SINGLE(ImageManager)->AddImage(_T("BGImage"), _T("../Resources/Image/bgImage.bmp"));
+	m_map->SetCenter(FALSE);
+
+	m_progressBar = make_shared<ProgressBar>();
+
+	if (m_progressBar)
+	{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		m_progressBar->Init(L"../Resources/Image/bar_front.bmp", L"../Resources/Image/bar_back.bmp", 0, 500, 500, 30);
+	}
 }
 
 void StartScene::Update(float dt)
@@ -34,17 +70,24 @@ void StartScene::Update(float dt)
 		m_posX += 100.0f * dt;
 	if (INPUT->GetButton(KEY_TYPE::LEFT))
 		m_posX -= 100.0f * dt;
+
+	m_offsetY -= m_offsetSpeed * dt;
 }
 
 void StartScene::Render(HDC hdc)
 {
-	Rectangle(hdc, m_posX, m_posY, m_posX + 100, m_posY + 100);
-	
+	RECT rtDraw = { 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT };
+
 	if (m_map)
-		m_map->DrawBitmap(hdc, 0, 0, 800, 800);	
+		m_map->DrawLoopBitmap(hdc, &rtDraw, 0, m_offsetY);	
 	if (m_player)
 	{
 		m_player->DrawBitmap(hdc, 200, 100, 200, 200);
+
+		RECT rc = m_player->GetBoundingBox();
+		SelectObject(hdc, GetStockObject(NULL_BRUSH));
+		Rectangle(hdc, rc.left, rc.top, rc.right, rc.bottom);
+
 		m_player->DrawBitmap(hdc, 200, 250);
 
 		m_player->DrawAlpha(hdc, 600, 300, 100, 200, 200);
@@ -53,6 +96,9 @@ void StartScene::Render(HDC hdc)
 		m_player->DrawRotate(hdc, 600, 400, 45, 200, 200);
 		//m_player->DrawRotate(hdc, 600, 550, 100, 200, 200);
 	}
+
+	if (m_progressBar)
+		m_progressBar->Render(hdc);
 }
 
 void StartScene::Release()

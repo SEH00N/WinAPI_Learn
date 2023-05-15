@@ -48,6 +48,10 @@
     <ClInclude Include="ImageManager.h">
       <Filter>Resource</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ProgressBar.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -83,5 +87,11 @@
     <ClCompile Include="ImageManager.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
+    <ClCompile Include="ProgressBar.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Engine.rc" />
   </ItemGroup>
 </Project>
