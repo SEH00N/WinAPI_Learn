@@ -26,6 +26,7 @@ using namespace std;
 #define SCREEN_HEIGHT	600
 
 #define PI				3.14159265
+#define Deg2Rad			PI / 180.0f
 
 // ½Ì±ÛÅæ µğÆÄÀÎ
 #define DECLARE_SINGLE(type)	\
